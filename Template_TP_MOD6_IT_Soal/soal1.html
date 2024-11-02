@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NIM_Soal1/title</title>
+    <link type="text/css" rel="stylesheet" href="style1.css">
+</head>
+<body onload="">
+    <form>
+        <div class="form-group">
+            <label>Halaman ini Menyuruh anda memasuki Naman anda</label>
+            <p>Masukan Nama Anda</p>
+            <input type="text" class="form-control" id="nama">
+        </div>
+        <div class="form-group">
+            <label>Halaman ini Menyuruh anda memasuki Nim anda</label>
+            <p>Masukan Nim Anda</p>
+            <input type="text" class="form-control" id="nim">
+        </div>
+        <div class="button-group">
+            <button type="button" onclick="submitForm()">Oke</button>
+            <button type="button" onclick="resetForm()">Batal</button>
+    </form>
+
+    <script type="text/javascript">
+        function submitForm() {
+            const name = document.getElementById('nama').value;
+            const nim = document.getElementById('nim').value;
+            if (name && nim) {
+                alert("Nama: " + name + "\nNIM: " + nim);
+            } else {
+                alert("Silakan masukkan Nama dan NIM.");
+            }
+        }
+
+        function resetForm() {
+            document.getElementById('nama').value = '';
+            document.getElementById('nim').value = '';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bermain dengan Warna</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Bermain dengan Warna</h1>
+
+    <div>
+        <button id="tombolMerah">Merah</button>
+        <button id="tombolBiru">Biru</button>
+        <button id="tombolKuning">Kuning</button>
+    </div>
+
+    <div id="kotakWarna"></div>
+
+    <div>
+        <button id="sembunyikanKotak">Sembunyikan Kotak</button>
+        <button id="tampilkanKotak">Tampilkan Kotak</button>
+    </div>
+
+    <p>Klik tombol warna untuk mengubah warna kotak.</p>
+    <p>Gunakan tombol Sembunyikan dan Tampilkan untuk menyembunyikan dan menampilkan kotak.</p>
+
+    <script>
+        $(document).ready(function() {
+            $('#tombolMerah').click(function() {
+                $('#kotakWarna').css('background-color', '#ff6b6b');
+            });
+            $('#tombolBiru').click(function() {
+                $('#kotakWarna').css('background-color', '#4ecdc4');
+            });
+            $('#tombolKuning').click(function() {
+                $('#kotakWarna').css('background-color', '#ffd93d');
+            });
+
+            $('#sembunyikanKotak').click(function() {
+                $('#kotakWarna').hide();
+            });
+            $('#tampilkanKotak').click(function() {
+                $('#kotakWarna').show();
+            });
+        });
+    </script>
+</body>
+</html>
